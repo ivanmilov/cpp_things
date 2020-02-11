@@ -1,0 +1,1 @@
+g++ -std=c++17 -O2  -pthread fluentcpp_reverse-for-loops-in-cpp.cpp  && ./a.out
