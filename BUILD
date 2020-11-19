@@ -11,3 +11,9 @@ cc_binary(
     srcs = ["fluentcpp_transform-adaptor-equivalent-in-cpp.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_13_fib_template",
+    srcs = ["cpp_weekly_13_fib_template.cpp"],
+    copts = COPTS,
+)
