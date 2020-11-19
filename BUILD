@@ -17,3 +17,9 @@ cc_binary(
     srcs = ["cpp_weekly_13_fib_template.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_13_fib_binet",
+    srcs = ["cpp_weekly_13_fib_binet.cpp"],
+    copts = COPTS,
+)
