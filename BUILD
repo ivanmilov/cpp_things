@@ -23,3 +23,9 @@ cc_binary(
     srcs = ["cpp_weekly_13_fib_binet.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_37_fib_stateful_lambda",
+    srcs = ["cpp_weekly_37_fib_stateful_lambda.cpp"],
+    copts = COPTS,
+)
