@@ -29,3 +29,9 @@ cc_binary(
     srcs = ["cpp_weekly_37_fib_stateful_lambda.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_37_fib_stateful_lambda_ext",
+    srcs = ["cpp_weekly_37_fib_stateful_lambda_ext.cpp"],
+    copts = COPTS,
+)
