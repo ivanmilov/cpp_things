@@ -41,3 +41,9 @@ cc_binary(
     srcs = ["cpp_weekly_189_fib_variable_template.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_189_variable_template",
+    srcs = ["cpp_weekly_189_variable_template.cpp"],
+    copts = COPTS,
+)
