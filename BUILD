@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
 COPTS = ["-std=c++17"]
 
 cc_binary(
