@@ -49,3 +49,8 @@ cc_binary(
     srcs = ["cpp_weekly_189_variable_template.cpp"],
     copts = COPTS,
 )
+cc_binary(
+    name = "longest_common_subsequence",
+    srcs = ["longest_common_subsequence.cpp"],
+    copts = COPTS,
+)
