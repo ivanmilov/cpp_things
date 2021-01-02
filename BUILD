@@ -67,3 +67,10 @@ cc_binary(
     srcs = ["longest_common_subsequence.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "cpp_weekly_11_std_future",
+    srcs = ["cpp_weekly_11_std_future.cpp"],
+    copts = COPTS,
+    linkopts = ["-pthread"],
+)
