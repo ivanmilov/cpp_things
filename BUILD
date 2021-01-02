@@ -74,3 +74,10 @@ cc_binary(
     copts = COPTS,
     linkopts = ["-pthread"],
 )
+
+cc_binary(
+    name = "cpp_weekly_11_std_future_bench",
+    srcs = ["cpp_weekly_11_std_future_bench.cpp"],
+    copts = COPTS,
+    deps = ["@gbenchmark//:benchmark_release"],
+)
