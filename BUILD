@@ -1,6 +1,12 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
-COPTS = ["-std=c++17"]
+COPTS = [
+    "-std=c++2a",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wshadow",
+]
 
 cc_binary(
     name = "fluentcpp_reverse-for-loops-in-cpp",
