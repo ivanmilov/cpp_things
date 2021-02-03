@@ -88,3 +88,8 @@ cc_binary(
     copts = COPTS,
 )
 
+cc_binary(
+    name = "cpp_weekly_134_visitor",
+    srcs = ["cpp_weekly_134_visitor.cpp"],
+    copts = COPTS,
+)
