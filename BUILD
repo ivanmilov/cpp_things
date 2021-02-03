@@ -81,3 +81,10 @@ cc_binary(
     copts = COPTS,
     deps = ["@gbenchmark//:benchmark_release"],
 )
+
+cc_binary(
+    name = "ranges_dummy",
+    srcs = ["ranges_dummy.cpp"],
+    copts = COPTS,
+)
+
