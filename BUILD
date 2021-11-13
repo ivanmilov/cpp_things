@@ -93,3 +93,9 @@ cc_binary(
     srcs = ["cpp_weekly_134_visitor.cpp"],
     copts = COPTS,
 )
+
+cc_binary(
+    name = "template_check_member",
+    srcs = ["template_check_member.cpp"],
+    copts = COPTS,
+)
