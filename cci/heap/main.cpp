@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cmath>
+#include <functional>
 #include <iostream>
 #include <vector>
 
@@ -19,11 +20,13 @@ int get_parent_index(int n)
 }
 } // namespace helper
 
-template <class T>
-struct HeapMax
+template <class T, class Comp = std::less<>>
+class Heap
 {
     std::vector<T> vec;
+    Comp comp;
 
+  public:
     bool empty() const { return vec.empty(); }
     auto size() const { return vec.size(); }
 
@@ -34,7 +37,7 @@ struct HeapMax
         auto new_id = sz - 1;
 
         auto parent_id = get_parent_index(new_id);
-        while (parent_id < sz and vec[parent_id] < v)
+        while (parent_id < sz and comp(vec[parent_id], v))
         {
             std::swap(vec[parent_id], vec[new_id]);
             new_id = parent_id;
@@ -53,7 +56,7 @@ struct HeapMax
         auto new_id{0};
 
         auto check_and_swap_child = [&new_id, sz = size(), this](auto ch_id) {
-            if (ch_id < sz and vec[ch_id] > vec[new_id])
+            if (ch_id < sz and comp(vec[new_id], vec[ch_id]))
             {
                 std::swap(vec[ch_id], vec[new_id]);
                 new_id = ch_id;
@@ -77,7 +80,7 @@ struct HeapMax
 
     const T& top() const { return vec.front(); }
 
-    void print()
+    void print() const
     {
         if (empty())
             return;
@@ -90,26 +93,20 @@ struct HeapMax
     }
 };
 
+template <class T>
+using HeapMax = Heap<T, std::less<>>;
+template <class T>
+using HeapMin = Heap<T, std::greater<>>;
+
 int main()
 {
     HeapMax<int> h;
 
-    h.print();
-    h.insert(3);
-    h.print();
-
-    h.insert(1);
-    h.print();
-
-    h.insert(2);
-    h.print();
-    h.insert(4);
-    h.print();
-
-    h.insert(7);
-    h.print();
-
-    h.insert(2);
+    for (auto i : {3, 1, 2, 4, 7, 2})
+    {
+        h.print();
+        h.insert(i);
+    }
     h.print();
 
     for (; not h.empty(); h.pop())
