@@ -99,3 +99,17 @@ cc_binary(
     srcs = ["template_check_member.cpp"],
     copts = COPTS,
 )
+
+
+cc_binary(
+    name = "write1",
+    srcs = ["write1.cpp"],
+    copts = COPTS,
+)
+
+
+cc_binary(
+    name = "write1",
+    srcs = ["write1.cpp"],
+    copts = COPTS,
+)

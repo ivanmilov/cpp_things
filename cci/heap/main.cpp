@@ -6,15 +6,15 @@
 
 inline namespace helper
 {
-int get_left_ch_index(int n)
+size_t get_left_ch_index(int n)
 {
     return 2 * n + 1;
 }
-int get_right_ch_index(int n)
+size_t get_right_ch_index(int n)
 {
     return 2 * n + 2;
 }
-int get_parent_index(int n)
+size_t get_parent_index(int n)
 {
     return round((n - 1) / 2);
 }

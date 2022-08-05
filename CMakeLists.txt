@@ -30,7 +30,6 @@ FetchContent_MakeAvailable(benchmark)
 
 add_executable(fluentcpp_reverse-for-loops-in-cpp fluentcpp_reverse-for-loops-in-cpp.cpp)
 
-
 add_executable(fluentcpp_transform-adaptor-equivalent-in-cpp fluentcpp_transform-adaptor-equivalent-in-cpp.cpp)
 
 add_executable(cpp_weekly_13_fib_template cpp_weekly_13_fib_template.cpp)
@@ -60,3 +59,7 @@ target_link_libraries(cpp_weekly_11_std_future_bench PUBLIC benchmark::benchmark
 add_executable(cpp_weekly_134_visitor cpp_weekly_134_visitor.cpp)
 
 add_executable(template_check_member template_check_member.cpp)
+
+
+
+add_subdirectory(cci)
